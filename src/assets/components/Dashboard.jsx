@@ -7,7 +7,7 @@ export default function Dashboard({ data }) {
     <>
       <Header dashboard={data.dashboard} />
 
-      <section className="grid grid-cols-1 gap-6">
+      <section className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
         {data.socialCards.map((social, index) => (
           <SocialCard key={index} social={social} />
         ))}
@@ -16,7 +16,7 @@ export default function Dashboard({ data }) {
       Overview - Today
       </h1>
 
-     <section className="grid grid-cols-1 gap-4">
+     <section className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
       {data.overview.map((over, index) => (
       <OverviewCard key={index} over={over} />
       ))}

@@ -6,7 +6,7 @@
 };
 export function OverviewCard({ over }) {
   return (
-    <section className="rounded-md  p-6">
+    <section className="rounded-md  p-6 ">
       <div className="flex items-center justify-between">
         <p className="text-sm font-bold text-slate-400">
           {over.metric}

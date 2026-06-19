@@ -7,7 +7,7 @@ const iconos = {
 
 export function SocialCard({ social }) {
   return (
-    <section className="rounded-md p-6 text-center">
+    <section className="rounded-md p-6 text-center ">
        
       <div className="mb-6 flex items-center justify-center gap-2 border-t-4 border-cyan-500 pt-4 ">
         <img className="w-5" src={iconos[social.platform]} alt={social.platform} />
