@@ -6,19 +6,27 @@
 };
 export function OverviewCard({ over }) {
   return (
-    <section>
-      <h1>Overview - Today</h1>
-      <div>
-        <img src={iconos[over.platform]} alt={over.platform} />
+    <section className="rounded-md  p-6">
+      <div className="flex items-center justify-between">
+        <p className="text-sm font-bold text-slate-400">
+          {over.metric}
+        </p>
+        <img className="w-5" src={iconos[over.platform]} alt={over.platform}/>
       </div>
-      <p>{over.metric}</p>
-      <p>{over.platform}</p>
 
-      <h3>{over.value}</h3>
+      <div className="mt-6 flex items-end justify-between">
+        <h3 className="text-3xl font-bold ">
+          {over.value}
+        </h3>
 
-      <p>
-        {over.isUp ? "+" : "-"} {over.change}%
-      </p>
+        <p
+          className={`text-xs font-bold ${
+            over.isUp ? "text-emerald-400" : "text-red-400"
+          }`}
+        >
+          {over.isUp ? "▲" : "▼"} {over.change}%
+        </p>
+      </div>
     </section>
   );
 }

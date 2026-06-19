@@ -11,13 +11,15 @@ export default function Dashboard({ data }) {
         {data.socialCards.map((social, index) => (
           <SocialCard key={index} social={social} />
         ))}
-      </section>
+      </section >
+      <h1 className="text-slate-400 text-2xl m-2 font-bold">
+      Overview - Today
+      </h1>
 
-      <section className="grid grid-cols-1 gap-6">
-        {data.overview.map((over, index) => (
-          <OverviewCard key={index} over={over} />
-        ))}
-        
+     <section className="grid grid-cols-1 gap-4">
+      {data.overview.map((over, index) => (
+      <OverviewCard key={index} over={over} />
+      ))}
       </section>
     </>
   );
